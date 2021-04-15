@@ -26,10 +26,10 @@ export default({
             user: {},
         }
     },
-    method: {
+    methods: {
         async fetchGitUsers(){
             try{
-                const response = await axios.get(`https://api.github.com/users/${this.userame}`)
+                const response = await axios.get(`https://api.github.com/users/${this.username}`)
                 this.user = response.data
             }
             catch(err){
